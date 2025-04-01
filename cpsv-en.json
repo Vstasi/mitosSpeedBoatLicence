@@ -1,0 +1,86 @@
+{
+    "PublicService": {
+        "name": "Speedboat Operator License",
+        "evidence": [
+            {
+                "id": 1,
+                "evs": [
+                    {
+                        "id": "ev0001",
+                        "type": "Evidence",
+                        "name": "Application Form",
+                        "description": "Completed application form submitted to the relevant maritime authority."
+                    },
+                    {
+                        "id": "ev0002",
+                        "type": "Evidence",
+                        "name": "Proof of Identity",
+                        "description": "Valid ID card or passport."
+                    },
+                    {
+                        "id": "ev0003",
+                        "type": "Evidence",
+                        "name": "Medical Certificates",
+                        "description": "Certified medical documents proving adequate vision, hearing, and physical condition."
+                    },
+                    {
+                        "id": "ev0004",
+                        "type": "Evidence",
+                        "name": "Passport-Sized Photographs",
+                        "description": "Two recent passport-sized photographs."
+                    },
+                    {
+                        "id": "ev0005",
+                        "type": "Evidence",
+                        "name": "Fee Payment Receipt",
+                        "description": "Proof of payment for the required licensing fees."
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "evs": [
+                    {
+                        "id": "ev0006",
+                        "type": "Evidence",
+                        "name": "Parental Consent (if applicable)",
+                        "description": "Signed parental consent form for applicants aged 16 to 18."
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "evs": [
+                    {
+                        "id": "ev0007",
+                        "type": "Evidence",
+                        "name": "Previous License (if applicable)",
+                        "description": "For renewal or replacement, a copy of the previous license is required."
+                    }
+                ]
+            }
+        ],
+        "criterion_requirements": [
+            {
+                "id": "cr0001",
+                "name": "Must be a permanent and legal resident of Greece"
+            },
+            {
+                "id": "cr0002",
+                "name": "Must be at least 18 years old (or 16 with parental consent)"
+            },
+            {
+                "id": "cr0003",
+                "name": "Must provide valid medical certificates"
+            },
+            {
+                "id": "cr0004",
+                "name": "Must complete theoretical and practical exams"
+            },
+            {
+                "id": "cr0005",
+                "name": "Must provide all necessary documents and fee payment receipts"
+            }
+        ]
+    }
+}
