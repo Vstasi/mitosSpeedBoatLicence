@@ -302,8 +302,8 @@ $("document").ready(function () {
     const errorEnd = document.createElement("h5");
     const error =
       currentLanguage === "greek"
-        ? "αλλά δεν δικαιούστε το δελτίο μετακίνησης ΑΜΕΑ!"
-        : "We are sorry but you are not entitled to the transportation card for the disabled!";
+        ? "Λυπούμαστε αλλά δεν δικαιούστε άδεια χειριστή ταχυπλόου!"
+        : "We are sorry but you are not entitled to speed boat operator licence!";
     errorEnd.className = "govgr-error-summary";
     errorEnd.textContent = error + " " + message;
     $(".question-container").html(errorEnd);
@@ -344,8 +344,8 @@ $("document").ready(function () {
     ) {
       getEvidencesById(10);
       currentLanguage === "greek"
-        ? setResult("Δικαιούται και ο συνοδός το ίδιο δελτίο μετακίνησης.")
-        : setResult("The companion is also entitled with the same transportation card.");
+        ? setResult("Πρέπει να υποβάλετε αίτηση στη Λιμενική Αρχή και να περάσετε τις θεωρητικές και πρακτικές εξετάσεις.")
+        : setResult("You must submit an application to the Port Authority and pass the theoretical and practical exams.");
     }
 
     if (allAnswers[6] === "2") {
@@ -359,38 +359,38 @@ $("document").ready(function () {
       getEvidencesById(12);
       currentLanguage === "greek"
       ? setResult(
-          "Δικαιούστε έκπτωση 50% για τις εκτός ορίων της περιφέρειας σας μετακινήσεις με υπεραστικά ΚΤΕΛ."
+          "Εάν είστε ναυτικός ή αξιωματικός του Πολεμικού Ναυτικού, ενδέχεται να δικαιούστε άδεια χωρίς εξετάσεις."
         )
       : setResult(
-          "You are entitled to a 50% discount for transportation outside the boundaries of your region with long-distance bus services (named KTEL)."
+          "If you are a naval officer or professional seafarer, you may be eligible for a license without exams."
         );
     } else if (allAnswers[7] === "2" && allAnswers[5] !== "1") {
       getEvidencesById(2);
       if (allAnswers[8] === "1") {
         currentLanguage === "greek"
           ? setResult(
-              "Δικαιούσαι δωρεάν μετακίνησης με τα αστικά μέσα συγκοινωνίας της περιφέρειας σου και έκπτωση 50% για τις εκτός ορίων της περιφέρειας σου μετακινήσεις με υπεραστικά ΚΤΕΛ."
+              "Η άδεια χορηγείται από τη Λιμενική Αρχή με συνολικό κόστος 65€."
             )
           : setResult(
-              "You are entitled to free transportation with the urban public bus of your region and a 50% discount for transportation outside the boundaries of your region with long-distance (intercity) bus services (named KTEL)."
+              "The license is issued by the Port Authority with a total cost of €65."
             );
       } else if (allAnswers[8] === "2") {
         currentLanguage === "greek"
           ? setResult(
-              "Δικαιούσαι έκπτωση 50% για τις εκτός ορίων της περιφέρειας σου μετακινήσεις με υπεραστικά ΚΤΕΛ."
+              "Οι εξετάσεις πραγματοποιούνται τουλάχιστον μία φορά το μήνα."
             )
           : setResult(
-              "You are entitled to a 50% discount for transportation outside the boundaries of your region with long-distance bus services (named KTEL)."
+              "The exams are held at least once a month."
             );
       }
     }
     else if(allAnswers[7] === "2" && allAnswers[5] === "1"){
       currentLanguage === "greek"
       ? setResult(
-          "Δικαιούσαι δωρεάν μετακίνησης με τα αστικά μέσα συγκοινωνίας της περιφέρειας σου και έκπτωση 50% για τις εκτός ορίων της περιφέρειας σου μετακινήσεις με υπεραστικά ΚΤΕΛ."
+          "Η προσωρινή βεβαίωση ισχύει για 60 ημέρες μέχρι την έκδοση της άδειας."
         )
       : setResult(
-          "You are entitled to free transportation with the urban public bus of your region and a 50% discount for transportation outside the boundaries of your region with long-distance (intercity) bus services (named KTEL)."
+          "The temporary certificate is valid for 60 days until the license is issued."
         );
     }
   }
@@ -399,8 +399,8 @@ $("document").ready(function () {
     const resultWrapper = document.createElement("div");
     const titleText =
       currentLanguage === "greek"
-        ? "Είστε δικαιούχος!"
-        : "You are eligible!";
+        ? "Είστε δικαιούχος άδειας χειριστή ταχυπλόου!"
+        : "You are eligible for the speed boat operator license!";
     resultWrapper.innerHTML = `<h1 class='answer'>${titleText}</h1>`;
     resultWrapper.setAttribute("id", "resultWrapper");
     $(".question-container").html(resultWrapper);
@@ -409,10 +409,10 @@ $("document").ready(function () {
     evidenceListElement.setAttribute("id", "evidences");
     currentLanguage === "greek"
       ? $(".question-container").append(
-          "<br /><br /><h5 class='answer'>Τα δικαιολογητικά που πρέπει να προσκομίσετε για να λάβετε το δελτίο μετακίνησης είναι τα εξής:</h5><br />"
+          "<br /><br /><h5 class='answer'>Τα δικαιολογητικά που πρέπει να προσκομίσετε για να λάβετε την άδεια χειριστή ταχυπλόου είναι τα εξής:</h5><br />"
         )
       : $(".question-container").append(
-          "<br /><br /><h5 class='answer'>The documents you need to provide in order to receive your transportation card are the following:</h5><br />"
+          "<br /><br /><h5 class='answer'>The documents you need to provide in order to receive your speed boat operator license are the following:</h5><br />"
         );
     $(".question-container").append(evidenceListElement);
     $("#faqContainer").load("faq.html");
@@ -429,13 +429,13 @@ $("document").ready(function () {
       console.log(selectedRadioButtonIndex);
       if (currentQuestion === 0 && selectedRadioButtonIndex === 3) {
         currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Μπορείτε να το εκδώσετε ξανά μόνο μια φορά μετά από απώλεια.") : skipToEnd("You can reissue it only one time after loss.");
+        currentLanguage === "greek" ? skipToEnd("Η άδεια μπορεί να εκδοθεί ξανά μόνο μία φορά σε περίπτωση απώλειας.") : skipToEnd("The license can only be reissued once in case of loss.");
       } else if (currentQuestion === 1 && selectedRadioButtonIndex === 2) {
         currentQuestion = -1;
         currentLanguage === "greek" ? skipToEnd("Πρέπει να είστε μόνιμος και νόμιμος κάτοικος της Ελλάδας.") : skipToEnd("You must be permanent and legal resident of Greece.");
       } else if (currentQuestion === 3 && selectedRadioButtonIndex === 2) {
         currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Πρέπει να έχετε ποσοστό αναπηρίας 67% και άνω ή να είστε δικαιούχος του επιδόματος ΟΠΕΚΑ.") : skipToEnd("You must have a disability rate of 67% or more or be a beneficiary of the OPEKA benefit.");
+        currentLanguage === "greek" ? skipToEnd("Πρέπει να είστε ικανός για να χειρίζεστε ταχύπλοο σκάφος.") : skipToEnd("You must be fit to operate a speedboat.");
       } else {
         //save selectedRadioButtonIndex to the storage
         userAnswers[currentQuestion] = selectedRadioButtonIndex;
