@@ -428,7 +428,7 @@ $("document").ready(function () {
         ) + 1;
       console.log(selectedRadioButtonIndex);
       if (currentQuestion === 0 && selectedRadioButtonIndex === 3) {
-        currentQuestion = -1;
+        currentQuestion = totalQuestions;
         currentLanguage === "greek" ? skipToEnd("Η άδεια μπορεί να εκδοθεί ξανά μόνο μία φορά σε περίπτωση απώλειας.") : skipToEnd("The license can only be reissued once in case of loss.");
       } else if (currentQuestion === 1 && selectedRadioButtonIndex === 2) {
         currentQuestion = -1;
